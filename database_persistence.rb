@@ -65,7 +65,7 @@ class DatabasePersistence
   end
 
   def mark_all_todos_as_completed(list_id)
-    sql = "UPDATE todos SET completed = true WHERE id = $1"
+    sql = "UPDATE todos SET completed = true WHERE list_id = $1"
     query(sql, list_id)
   end
 
